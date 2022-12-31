@@ -1,0 +1,145 @@
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>الدفع</title>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" src='script.js'></script>
+</head>
+
+
+<body>
+
+<div class="row">
+
+<div class="col-1 haeder" id="header"></div>
+
+ <div class="col-3">
+  <div class="paymentContainer">
+   <div class="paymentRow">
+    <a href="javascript:void(0)" onclick="openPymentMethod(event, 'textPyment');" >
+     <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><h3>الدفع بالرسائل النصية</h3></div>
+    </a>
+	
+    <a href="javascript:void(0)" onclick="openPymentMethod(event, 'bankList');">
+     <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><h3>قائمة البنوك</h3></div>
+    </a>
+	
+    <a href="javascript:void(0)" onclick="openPymentMethod(event, 'pointSale');">
+     <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><h3>قائمة شركات نقاط البيع</h3></div>
+    </a>
+  </div>
+
+   <div id="textPyment" class="w3-container pyment" style="display:none">
+    <h3>طريقة الدفع</h3>
+    <ul>
+	 <li>امتلاك بطاقة مصرفية</li>
+	 <li>التأكد أن رقم الهاتف مربوط مع رقم الحساب البنكي</li>
+	 <li>إرسال رسالة إلى 2999 كالاتي:</li>
+	 </ul>
+	 <h4>الشهادة السودانية</h4>
+	 <ul>
+	 <li>*6200*المبلغ*اخر اربعة ارقام*رقم المساق*تأكيد رقم الجلوس*رقم الجلوس#</li>
+	 </ul>
+	 <h4>الشهادة العربية</h4>
+	 <ul>
+	 <li>*6300*المبلغ*اخر اربعة ارقام*نوع القبول*رقم الهاتف*الاسم باللغة لانجليزية#</li>
+	 </ul>
+	 <h3>ارقام المساقات</h3>
+	 <ul>
+	 <li>1 اكاديمي</li>
+	 <li>2 زراعي</li>
+	 <li>3 تجاري</li>
+	 <li>4 صناعي</li>
+	 <li>5 نسوي</li>
+	 <li>6 أهلية</li>
+	</ul>
+   </div>
+
+   <div id="bankList" class="w3-container pyment"  style="display:none">
+    <h3>قائمة البنوك</h3>
+	<ul>
+     <li>العمال</li>
+     <li>النيل</li>
+     <li>الزراعي</li>
+     <li>الإدخار</li>
+     <li>الفرنسي</li>
+     <li>تنمية الصادرات</li>
+     <li>العقاري</li>
+     <li>الإسلامي</li>
+     <li>التضامن</li>
+     <li>النيلين</li>
+     <li>الاسرة</li>
+     <li>السعودي</li>
+     <li>السلام</li>
+     <li>ام درمان الوطني</li>
+     <li>فيصل</li>
+     <li>المزارع</li>
+   </ul>
+  </div>
+
+  <div id="pointSale" class="w3-container pyment" style="display:none">
+   <table id="customers">
+    <tr>
+     <th><h3>الشركة</h3></th>
+	 <th><h3>القناة</h3></th>
+     <th><h3>رابط التطبيق</h3></th>
+    </tr>
+	
+    <tr>
+     <td>Digitalize ديجتلايز</td>
+     <td rowspan="1">نقطة بيع وتطبيق </td>
+	 <td>
+	  <a href="www.mahfazaty.net/apps/mahfazaty">1</a>
+      <a href="www.almahfaza.org/app">2</a>
+      <a href="www.mahfazaty.net">3</a>
+      <a href="www.fcbsudan.com/nas_albait">4</a>
+      <a href="www.mahfazaty.net/apps/minibank">5</a>
+     </td>
+    </tr>
+	
+    <tr>
+     <td> Rital ريتال</td>
+	 <td></td>
+	 <td><a href="https://mohe.syber.sd/">Rital</a></td>
+    </tr>
+	
+    <tr>
+     <td>SMART سمارت</td>
+	 <td></td>
+     <td><a href="smartsudan.net/MobiPay.apk">SMART App</a></td>
+    </tr>
+	
+    <tr>
+     <td> Syber Technology سايبر</td>
+     <td>تطبيق</td>
+     <td><a href="mohe.syber.sd/">Syber app</a></td>
+    </tr>
+	
+    <tr>
+     <td>Fact فاكت</td>
+     <td rowspan="1">نقطة بيع</td>
+    </tr>
+	
+    <tr>
+    <td>Omega اوميقا</td>
+    </tr>
+	
+    <tr>
+     <td>MIDURO ميديورو</td>
+    </tr>
+  
+  </table>
+
+   </div>
+   
+  </div>
+ </div>
+ 
+ </div>
+  <footer class="col-6" id="footer"></footer>
+  
+</body>
+</html>

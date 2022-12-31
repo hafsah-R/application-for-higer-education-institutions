@@ -1,0 +1,396 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+<html>
+
+<title>التقديم</title>
+
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src='script.js'></script>
+</head>
+
+<body>
+
+<div class="row">
+
+<div class="col-1 haeder" id="header">
+
+ <div>
+	 <img src="Picture.png"></img>
+  </div>
+	
+ <div class="dropdown" id="phoneDropdown">
+  <button onclick="myFunction()" class="dropbtn">
+   <div class="menueIcon"></div>
+   <div class="menueIcon"></div>
+  </button>
+  <div id="myDropdown" class="dropdown-content">
+    <ul>
+       <li><a href="index.html" target="_self">الرئيسية</a></li>
+       <li><a href="التقديم.html" target="_blank">التقديم</a></li>
+       <li><a href="النتيجة.html">النتيجة</a></li>
+       <li><a href="الدفع.html">الدفع الإلكتروني</a></li>
+      </ul> 
+  </div>
+</div>
+	
+ <ul class="largeScreenHeader">
+  <li><a href="index.html" target="_self">الرئيسية</a></li>
+  <li><a href="التقديم.html" target="_blank">التقديم</a></li>
+  <li><a href="النتيجة.html">النتيجة</a></li>
+  <li><a href="الدفع.html">الدفع الإلكتروني</a></li>
+ </ul> `;
+
+</div>
+
+
+<div class="col-3">
+
+ <div class="tabLinkContainer">
+
+  <div class="tab">
+   <button class="tablinks" onclick="openStep(event, 'stepOne')">الخطوة الاولى</button>
+   <button class="tablinks" onclick="openStep(event, 'stepTwo')">الخطوة الثانية</button>
+   <button class="tablinks" onclick="openStep(event, 'stepThree')">الخطوة الثالثة</button>
+   <button class="tablinks" onclick="openStep(event, 'stepFour')">الخطوة الرابعة</button>
+   <button class="tablinks" onclick="openStep(event, 'stepFive')">الخطوة الخامسة</button>
+   <button class="tablinks" onclick="window.open('','_self').close()">خروج</button>
+  </div>
+
+  <div id="stepOne" class="tabcontent">
+   <label for="seatNo" >رقم الجلوس</label>
+   <input type="text" id="seatNo" class="input"  required>
+   
+   <label>المساق</label>
+    <select>
+     <option value="">علمي</option>
+     <option value="">أدبي</option>
+    </select>
+	
+   <label for="nationalNo" >الرقم الوطني</label>
+   <input type="text" class="input" id="nationalNo"  required>
+  
+   <label for="captchaa">اعد كتابة ماتراه</label>
+	<body onload="init();">
+    <div>
+    <canvas id="cptch" width="130" height="36"></canvas>
+    <button id="refreshButton" name="captchaa" onclick="change();"><img src="refresh.png"></button>
+    </div>
+ 
+   <br>
+   
+    <input id="validtxt"  class="input" type="text" name="validtxt" required >
+	
+    <button name="Send" onclick="if(Valid()==true)openStep(event, 'stepTwo')">الخطوة الثانية</button>
+
+ </div>
+ 
+ <div id="stepTwo" class="tabcontent">
+  <h3>ملف الطالب</h3>
+  <hr>
+  
+  <table>
+   <tr>
+    <th>الاسم</th>
+    <th>الرقم الوطني</th>
+   </tr>
+   
+   <tr>
+   <td>
+    <output>yyy</output>
+   <td>
+    <output>yyy</output>
+   </td>
+   </tr>
+   <tr>
+    <th>المدرسة</th>
+    <th>الولاية</th>
+   </tr>
+   
+   <tr>
+    <td><output>6</output></td>
+    <td><output>6</output></td>
+   </tr>
+   
+   <tr>
+    <th>المساق</th>
+    <th>سداد الرسوم</th>
+   </tr>
+   
+   <tr>
+    <td><output>6</output></td>
+    <td><output>6</output></td>
+   </tr>
+ </table>
+
+ <div class="phoneInfo">
+  <h3>ادخل بيانات الهاتف</h3>
+  <hr>
+  
+  <label>رقم الهاتف</label>
+   <input type="text" class="input" required>
+   
+   <label>اعد ادخال الرقم</label>
+    <input type="text" class="input" required>
+	
+  <label>الجنسية</label>
+  ​ <select>
+	<option value="UG">أوغندا</option>
+	<option value="ER">اريتريا</option>
+	<option value="DZ">الجزائر</option>
+	<option value="SD">السودان</option>
+	<option value="SO">الصومال</option>
+	<option value="IQ">العراق</option>
+	<option value="CM">الكاميرون</option>
+	<option value="YE">اليمن</option>
+	<option value="BF">بوركينا فاسو</option>
+	<option value="BI">بوروندي</option>
+	<option value="PL">بولندا</option>
+	<option value="BO">بوليفيا</option>
+	<option value="TZ">تانزانيا</option>
+	<option value="TD">تشاد</option>
+	<option value="KM">جزر القمر</option>
+	<option value="CF">جمهورية افريقيا الوسطى</option>
+	<option value="CD">جمهورية الكونغو الديمقراطية</option>
+	<option value="ZM">زامبيا</option>
+	<option value="ZW">زيمبابوي</option>
+	<option value="CI">ساحل العاج</option>
+	<option value="WS">ساموا</option>
+	<option value="SY">سوريا</option>
+	<option value="GH">غانا</option>
+	<option value="GN">غينيا</option>
+	<option value="KE">كينيا</option>
+	<option value="LY">ليبيا</option>
+	<option value="ML">مالي</option>
+	<option value="MY">ماليزيا</option>
+	<option value="MG">مدغشقر</option>
+	<option value="EG">مصر</option>
+	<option value="MR">موريتانيا</option>
+	<option value="MU">موريشيوس</option>
+	<option value="MZ">موزمبيق</option>
+	<option value="NR">نورو</option>
+	<option value="NP">نيبال</option>
+	<option value="NG">نيجيريا</option>
+  </select>
+ </div>
+ 
+ <button name="Send" onclick="openStep(event, 'stepThree)">الخطوة الثالثة</button>
+ 
+</div>
+
+ <div id="stepThree" class="tabcontent">
+
+  <div class="row">
+   <div class="col-sm-4">
+    <input type="radio" id="diploma" >
+	<label for="diploma">تقديم دبلوم</label>
+   </div>
+   
+   <div class="col-sm-4">
+    <input type="radio" id="province" >
+    <label for="province">التقديم الولائي</label>
+   </div>
+   
+   <div class="col-sm-4">
+   <input type="radio" id="bacholre">
+   <label for="bacholre">تقديم البكالريوس</label>
+   </div>
+</div>
+
+  <div>
+   <label  class="label">نوع المؤسسة</label>
+  ​ <select id="Institute" name="InstituteType" onchange="hideDropdown()">
+	<option value="govInstitute">مؤسسات التعليم العالي الحكومية</option>
+	<option value="paidInstitute">مؤسسات التعليم الأهلي والاجنبي والخاص</option>
+   </select>
+   
+   <select  name="InstituteType" id="govInstitute">
+    <option value="Institute">الجامعة</option>
+	<option value="">الخرطوم</option>
+	<option value="">السودان للعلوم والتكنولوجيا</option>
+	<option value="">ام درمان الاسلامية</option>
+	<option value="">القران الكريم والعلوم الاسلامية</option>
+	<option value="">الزعيم الازهري</option>
+	<option value="">بحري</option>
+	<option value="paidInstitute">بخت الرضا</option>
+	<option value="paidInstitute">الامام المهدي</option>
+	<option value="paidInstitute">النيل الازرق</option>
+	<option value="paidInstitute">الجزيرة</option>
+	<option value="paidInstitute">عطبرة</option>
+	<option value="paidInstitute">الجزيرة</option>
+   </select>
+	
+	
+	<select id="paidInstitute" name="InstituteType">
+    <option value="Institute">جامعة الاحفاد</option>
+	<option value="paidInstitute">السودان العالمية</option>
+	<option value="paidInstitute">ام درمان الاهلية</option>
+	<option value="paidInstitute">العلوم والتقانة</option>
+	<option value="paidInstitute">العلوم الطبية والتكنولوجيا</option>
+	<option value="paidInstitute">المستقبل</option>
+	<option value="paidInstitute">المغتربين</option>
+	<option value="paidInstitute">السودان العالمية</option>
+	<option value="paidInstitute">ام درمان الاهلية</option>
+	<option value="paidInstitute">العلوم والتقانة</option>
+	<option value="paidInstitute">العلوم الطبية والتكنولوجيا</option>
+	<option value="paidInstitute">المستقبل</option>
+	<option value="paidInstitute">المغتربين</option>
+	<option value="paidInstitute">ود مدني الاهلية</option>
+	<option value="paidInstitute">الوطنية</option>
+	<option value="paidInstitute">المشرق</option>
+	<option value="paidInstitute">الرازي</option>
+	<option value="paidInstitute">الجامعة العربية المفتوحة</option>
+	<option value="paidInstitute">قاردن سيتس</option>
+	<option value="paidInstitute">ابن سينا</option>
+	<option value="paidInstitute">الشيخ عبدالله البدري</option>
+	<option value="paidInstitute">النيل الابيض</option>
+	<option value="paidInstitute">جامعة العلوم الصحية التركية</option>
+	<option value="paidInstitute">النيل</option>
+	<option value="paidInstitute">كلية شرق النيل</option>
+	<option value="paidInstitute"> كليةالنصر</option>
+	<option value="paidInstitute">الخرطوم للعلوم والتقانة</option>
+	<option value="paidInstitute">الخرطوم التطبيقية</option>
+	<option value="paidInstitute">السودان العالمية</option>
+	<option value="paidInstitute"> كلية المدار</option>
+	<option value="paidInstitute">كلية السودان الجامعية للبنات</option>
+	<option value="paidInstitute">اكاديمية السودان للعلوم المصرفية والمالية</option>
+	<option value="paidInstitute">كلية الشرق الاهلية</option>
+	<option value="paidInstitute">كلية بورتسودان الاهلية</option>
+	<option value="paidInstitute">كلية البيان للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">كلية ابوبكر عثمان</option>
+	<option value="paidInstitute">كلية الابيض للعلوم والتقانة</option>
+	<option value="paidInstitute">كلية الامارات للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">كلية كمبوني للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">كلية دلتا للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">كلية الحكمة للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">كلية النهضة</option>
+	<option value="paidInstitute">كلية كامبردج العالمية</option>
+	<option value="paidInstitute">كلية السلامة للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">الاكاديمية القومية للعلوم الجمركية والتكنولوجيا</option>
+	<option value="paidInstitute">اكاديمية الخرطوم للعلوم الجمركية والتكنولوجيا</option>
+	<option value="paidInstitute">كلية نبتة</option>
+	<option value="paidInstitute">كلية الجزيرة للعلوم الطبية والتكنولوجيا</option>
+	<option value="Institute">كلية نزلاوي للعلوم</option>
+	<option value="paidInstitute">كلية الحياة</option>
+	<option value="paidInstitute">كلية المعرفة للعلوم والتكنولوجيا</option>
+	<option value="paidInstitute">كلية السافانا</option>
+	<option value="paidInstitute">كلية عزة للبنات</option>
+	<option value="paidInstitute">كلية دارفور</option>
+	<option value="paidInstitute">كلية ابن خلدون</option>
+	</select>
+	
+  <label></label>
+ 
+  ​ <div class="dropdown">
+    <button onclick="showDropdown()" class="dropbtn">الكلية</button>
+    <div id="DropdownValues" class="dropdown-content">
+     <input type="text" placeholder="بحث....." id="Input" onkeyup="filtercollageName()">
+     <a href="">كلية الاداب-جامعة الخرطوم</a>
+	 <a href="">كلية علوم الجغرافيا والبيئة-البيئة والأيكلوجيا-جامعة الخرطوم</a>
+     <a href="">كليه علوم الجغرافيا والبيئة-التخطيط والتنمية-جامعةالخرطوم</a>
+	 <a href="">كليه علوم الجغرافيا والبيئة-الدراسات السكانية والبشرية</a>
+	 <a href="">كلية علوم الجغرافيا والبيئة-نظم المعلومات الجغرافية والكارتوغرافيا-جامعةالخرطوم</a>
+	 <a href="">كلية الدراسات الإقتصادية والإجتماعية-الإقتصاد القياسي والإحصاء الاجتماعي-جامعةالخرطوم</a>
+	 <a href="">كلية علوم الجغرافيا والبيئة-البيئة والأيكلوجيا-جامعة الخرطوم</a>
+     <a href="">كلية علوم الجغرافيا والبيئة-نظم المعلومات الجغرافية والكارتوغرافيا-جامعةالخرطوم</a>
+    </div>
+   </div>
+  
+  </div>
+
+  <button name="Send"  onclick="if(Valid()==true)openStep(event, 'stepFour')">الخطوة الرابعة</button>
+ </div> 
+
+ <div id="stepFour" class="tabcontent">
+  <div class="termAndCondtionWarpper">
+   <div>
+   <input type="checkbox" id="termAndCondtion" name="agree">
+  </div>
+   <div>اقر ان الرغبات التي تقدمت بها هي الرغبات الصحيحة وتم التأكد منها والبيانات التي تقدمت بها هي البيانات الصحيحة</div>
+  </div>
+ 
+  <h3>تفاصيل سداد الرسوم</h3>
+  <hr>
+  <table>
+   <tr>
+    <th>رقم الإيصال</th>
+    <th>القيمة</th>
+   </tr>
+   
+   <tr>
+    <td>
+     <output>yyy</output>
+    <td>
+     <output>yyy</output>
+    </td>
+   </tr>
+   
+   <tr>
+    <th>تاريخ الدفع</th>
+    <th>رقم الدفع</th>
+   </tr>
+   
+   <tr>
+    <td><output>6</output></td>
+    <td><output>6</output></td>
+   </tr>
+  </table>
+  
+  <button name="Send" onclick="if((Valid()==true)openStep(event, 'stepFive')">الخطوة الخامسة</button>
+ </div> 
+
+ <div id="stepFive" class="tabcontent">
+  <h3>رغبات الطالب النهائية</h3>
+  <hr>
+  
+  <table>
+   <tr>
+    <th>الترتيب</th>
+	<td>
+    <output></output>
+	</td>
+   </tr>
+   
+   <tr>
+    <th>اسم البرنامج</th>
+    <td>
+    <output>yyy</output>
+	</td>
+	</tr>
+	
+	 <th>رمز البرنامج</th>
+    <td>
+     <output>yyy</output>
+    </td>
+   </tr>
+  </table>
+ 
+  <button name="Send" onclick="Valid();">طباعة الإستمارة</button>
+ </div> 
+
+</div>
+
+ </div>
+ 
+ <footer class="col-6" id="footer">
+ 
+  <span class="left">
+     <a href="https://ar-ar.facebook.com/admission.gov.sd">
+     <img src="icon-facebook.svg">
+     </a>
+     <img class="youtube" src="y.png">
+     <a href="https://twitter.com/lu2guvy8effdcxy">
+     <img src="icon-twitter.svg">
+     </a>
+    </span>
+
+   <span class="right"> 2022 © جميع الحقوق محفوظة</span>`;
+ 
+ </footer>
+ 
+ </div>
+  
+</body>
+</html>
