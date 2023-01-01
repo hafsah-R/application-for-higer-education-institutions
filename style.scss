@@ -612,7 +612,9 @@ select{
    border:none;
  }
 
- footer{	
+ footer{
+  bottom:0;
+  position:absolute;	
   span{
 	margin:3.5vw;
 	}
