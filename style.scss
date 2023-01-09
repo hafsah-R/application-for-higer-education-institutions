@@ -293,6 +293,7 @@ select{
 }
 
  .tabcontent {
+  display:none;
   float: right;
   padding: 0vw 2vw;
   border: 1px solid #ccc;
@@ -553,6 +554,17 @@ select{
   margin: 1vw;
   }
   
+ .phoneRow{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  
+ .col-3{
+	 flex:1;
+ }
+ 
+ }
+ 
  .dropbtn {
   background-color:transparent;
   color: white;
@@ -603,7 +615,8 @@ select{
   }
   
  .col-4{
-  padding-top:20%;}
+  padding-top:20%;
+  }
   
   iframe{
    width:60%;
@@ -611,10 +624,8 @@ select{
    margin:0 20vw;
    border:none;
  }
-
  footer{
-  bottom:0;
-  position:absolute;	
+  
   span{
 	margin:3.5vw;
 	}
@@ -634,7 +645,7 @@ select{
  
  .tabcontent {
   height:50%;
-  
+
   h3{
    white-space:nowrap; 
    width:100%;	
@@ -723,5 +734,6 @@ select{
  }
  
  }
+
  
 }

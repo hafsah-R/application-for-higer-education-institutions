@@ -234,6 +234,7 @@ select {
   background-color: #ccc;
 }
 .tabLinkContainer .tabcontent {
+  display: none;
   float: right;
   padding: 0vw 2vw;
   border: 1px solid #ccc;
@@ -428,6 +429,15 @@ select {
     height: 0.8vw;
     background-color: black;
     margin: 1vw;
+  }
+
+  .phoneRow {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .phoneRow .col-3 {
+    flex: 1;
   }
 
   .dropbtn {
